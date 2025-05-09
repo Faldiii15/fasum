@@ -8,6 +8,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:http/http.dart' as http;
 class AddPostScreen extends StatefulWidget {
   const AddPostScreen({Key? key}) : super(key: key);
   @override
@@ -120,12 +121,12 @@ class _AddPostScreenState extends State<AddPostScreen> {
     if (_image == null) return;
     setState(() => _isGenerating = true);
     try {
-      final model = GenerativeModel(
-        model: 'gemini-1.5-pro',
-        apiKey: 'AIzaSyBGTO6OgcoINlc4B-aQD3R_-QLtptjhtRE',
-      );
       final imageBytes = await _image!.readAsBytes();
       final content = Content.multi([
+
+        const apiKey = ['AIzaSyAOWp0Z8jPbcpQ3mV6wvqBvjNjCg20PI6E'];
+        const url = 'htt'
+
         DataPart('image/jpeg', imageBytes),
         TextPart(
           'Berdasarkan foto ini, identifikasi satu kategori utama kerusakan fasilitas umum '
