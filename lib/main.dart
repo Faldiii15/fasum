@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fasum/firebase_options.dart';
 import 'package:fasum/screens/home_screen.dart';
 import 'package:fasum/screens/sign_in_screen.dart';
-import 'package:';
 import 'package:firebase_app_check/firebase_app_check.dart';
 
 void main() async {
