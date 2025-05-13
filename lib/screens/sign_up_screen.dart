@@ -167,9 +167,9 @@ class SignUpScreenState extends State<SignUpScreen> {
             (route) => false, // Hapus semua route sebelumnya
       );
     } on FirebaseAuthException catch (error) {
-      _showErrorMessage(_getAuthErrorMessage(error.code));
+      // _showErrorMessage(_getAuthErrorMessage(error.code));
     } catch (error) {
-      _showErrorMessage('An error occurred: $error');
+      // _showErrorMessage('An error occurred: $error');
     } finally {
       setState(() => _isLoading = false);
     }
