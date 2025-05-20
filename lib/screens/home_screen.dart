@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fasum_ai/screens/add_post_screen.dart';
-import 'package:fasum_ai/screens/detail_screen.dart';
+import 'package:fasum/screens/add_post_screen.dart';
+import 'package:fasum/screens/detail_screen.dart';
 import 'package:fasum_ai/screens/sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -73,8 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ListTile(
                     leading: const Icon(Icons.clear),
                     title: const Text('Semua Kategori'),
-                    onTap: () => Navigator.pop(context, null), // Null untuk memilih
-                    semua kategori
+                    onTap: () => Navigator.pop(context, null),
+                    // Null untuk memilih semua kategori
                 ),
                 const Divider(),
                 ...categories.map(
