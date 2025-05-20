@@ -10,6 +10,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:http/http.dart' as http;
 class AddPostScreen extends StatefulWidget {
+
   const AddPostScreen({Key? key}) : super(key: key);
   @override
   State<AddPostScreen> createState() => _AddPostScreenState();

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fasum/screens/add_post_screen.dart';
 import 'package:fasum/screens/detail_screen.dart';
-import 'package:fasum_ai/screens/sign_in_screen.dart';
+import 'package:fasum/screens/sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -95,8 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
     if (result != null) {
       setState(() {
-        selectedCategory = result; // Set kategori yang dipilih atau null untuk Semua
-        Kategori
+        selectedCategory = result;
+        // Set kategori yang dipilih atau null untuk Semua Kategori
       });
     } else {
       // Jika result adalah null, berarti memilih Semua Kategori
@@ -150,8 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
               return selectedCategory == null || selectedCategory == category;
             }).toList();
             if (posts.isEmpty) {
-              return const Center(child: Text("Tidak ada laporan untuk kategori
-                  ini."));
+              return const Center(child: Text("Tidak ada laporan untuk kategori ini."));
                   }
                   return ListView.builder(
                   physics: const AlwaysScrollableScrollPhysics(),
